@@ -1,5 +1,11 @@
 h1 {
     text-align: center;
+    margin-bottom: 0px;
+}
+#button-div {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
 }
 #container {
     display: flex;
