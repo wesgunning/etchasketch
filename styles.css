@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+#container {
+    border: 2px solid black;
+}
+
+.boxes {
+    border: 2px solid blue;
+    height: 20px;
+    width: 20px;
+}
