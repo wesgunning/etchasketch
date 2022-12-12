@@ -1,6 +1,5 @@
 
 // Create 16x16 grid of squares
-
 const container = document.querySelector('#container');
 const grid = document.createElement('div');
 grid.classList.add('grid');
@@ -14,5 +13,10 @@ for (i = 0; i < n; i++) {
         const div = document.createElement('div');
         div.classList.add('boxes');
         row.appendChild(div);
+        div.addEventListener("mouseover", function (e) {
+            e.target.style.background = 'blue';
+        });
     }
 }
+
+// Listen for mouse hover over individual boxes
