@@ -66,10 +66,12 @@ function rebuildGrid(n) {
 
 function boxSize() {
    let m = n; // Storing value of current box size
-   n = prompt("What size square would you like? (Maximum of 100 per side.)");
+   n = prompt("How many squares per side would you like? (Maximum of 100.)");
    if (n != null && n < 1) {
     alert("Please enter a positive number.");
+    n = m;
     boxSize();
+    return 0;
    }
    if (n !=null && n > 100) {
     let n = 100;
