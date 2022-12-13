@@ -46,7 +46,10 @@ function rebuildGrid(n) {
 }
 
 function boxSize() {
-   let n = prompt("What size square would you like?");
+   let n = prompt("What size square would you like? (Maximum of 100 per side.)");
+   if (n > 100) {
+    let n = 100;
+   };
    removeGrid();
    rebuildGrid(n);
 };
