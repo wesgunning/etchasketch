@@ -52,12 +52,15 @@ function rebuildGrid(n) {
 
 function boxSize() {
    n = prompt("What size square would you like? (Maximum of 100 per side.)");
-   if (n < 1) {
+   if (n != null && n < 1) {
     alert("Please enter a positive number.");
     boxSize();
    }
-   if (n > 100) {
+   if (n !=null && n > 100) {
     let n = 100;
+   }
+   if (n == null) {
+    return 0;
    }
    removeGrid();
    rebuildGrid(n);
