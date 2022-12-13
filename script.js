@@ -44,7 +44,7 @@ function rebuildGrid(n) {
             row.appendChild(div);
             // Listen for mouse hover over individual boxes
             div.addEventListener("mouseover", function (e) {
-                e.target.style.backgroundColor = 'black';
+                e.target.style.backgroundColor = randColor();
             });
         }
     }
@@ -69,5 +69,11 @@ function boxClear() {
 }
 
 function randNum() {
-    floor(Math.random()*256);
+    let a = Math.floor(Math.random()*256);
+    return a;
+}
+
+function randColor() {
+    let color = 'rgb(' + randNum() + ',' + randNum() + ',' + randNum() + ')';
+    return color;
 }

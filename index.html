@@ -9,11 +9,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>JS Etch-A-Sketch Project</h1>
+    <h1>Etch-A-Sketch Project</h1>
     <div id="button-div"><button id="size">Change box size</button></div>
     <div id="container">
 
     </div>
-    <div id="options-div"><button id="reset">Reset</button></div>
+    <div id="options-div">
+        <button id="reset">Reset</button>
+        <input type="radio" name="fill-color" id="black">
+        <label for="black">Black</label>
+        <input type="radio" name="fill-color" id="color">
+        <label for="color">Color</label>
+        <input type="radio" name="fill-color" id="shaded">
+        <label for="shaded">Shade mode</label>
+    </div>
 </body>
 </html>
