@@ -1,3 +1,7 @@
+// Radio buttons
+var blackRadio = document.getElementById('blackRadio');
+var colorRadio = document.getElementById('colorRadio');
+var shadedRadio = document.getElementById('shadedRadio');
 
 // Create 16x16 grid of squares
 const container = document.querySelector('#container');
@@ -15,7 +19,12 @@ for (i = 0; i < n; i++) {
         row.appendChild(div);
         // Listen for mouse hover over individual boxes
         div.addEventListener("mouseover", function (e) {
-            e.target.style.backgroundColor = 'black';
+            if (blackRadio.checked == true) {
+                e.target.style.backgroundColor = 'black';
+            }
+            else if (colorRadio.checked == true) {
+                e.target.style.backgroundColor = randColor();
+            }
         });
     }
 }
@@ -44,7 +53,12 @@ function rebuildGrid(n) {
             row.appendChild(div);
             // Listen for mouse hover over individual boxes
             div.addEventListener("mouseover", function (e) {
-                e.target.style.backgroundColor = randColor();
+                if (blackRadio.checked == true) {
+                    e.target.style.backgroundColor = 'black';
+                }
+                else if (colorRadio.checked == true) {
+                    e.target.style.backgroundColor = randColor();
+                }
             });
         }
     }
