@@ -10,6 +10,10 @@ h1 {
     justify-content: center;
     margin: 20px auto;
 }
+button {
+    font-size: 1.3rem;
+    border-radius: 4px;
+}
 #container {
     display: flex;
     justify-content: center;
