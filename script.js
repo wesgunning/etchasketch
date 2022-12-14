@@ -17,6 +17,9 @@ for (i = 0; i < n; i++) {
         const div = document.createElement('div');
         div.classList.add('boxes');
         row.appendChild(div);
+        // Assign white to empty div
+        let saturation = 100;
+        div.style.backgroundColor = 'hsl(0, 0%, ' + (saturation) + '%';
         // Listen for mouse hover over individual boxes
         div.addEventListener("mouseover", function (e) {
             if (blackRadio.checked == true) {
@@ -24,6 +27,10 @@ for (i = 0; i < n; i++) {
             }
             else if (colorRadio.checked == true) {
                 e.target.style.backgroundColor = randColor();
+            }
+            else if (shadedRadio.checked == true) {
+                e.target.style.backgroundColor = 'hsl(0, 0%, ' + (saturation - 10) + '%';
+                saturation -= 10;
             }
         });
     }
@@ -69,7 +76,7 @@ function boxSize() {
    n = prompt("How many squares per side would you like? (Maximum of 100.)");
    if (n != null && n < 1) {
     alert("Please enter a positive number.");
-    n = m;
+    n = m; // Prevents null bug
     boxSize();
     return 0;
    }
