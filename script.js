@@ -58,6 +58,9 @@ function rebuildGrid(n) {
             const div = document.createElement('div');
             div.classList.add('boxes');
             row.appendChild(div);
+            // Assign white to empty div
+            let saturation = 100;
+            div.style.backgroundColor = 'hsl(0, 0%, ' + (saturation) + '%';
             // Listen for mouse hover over individual boxes
             div.addEventListener("mouseover", function (e) {
                 if (blackRadio.checked == true) {
@@ -65,6 +68,10 @@ function rebuildGrid(n) {
                 }
                 else if (colorRadio.checked == true) {
                     e.target.style.backgroundColor = randColor();
+                }
+                else if (shadedRadio.checked == true) {
+                    e.target.style.backgroundColor = 'hsl(0, 0%, ' + (saturation - 10) + '%';
+                    saturation -= 10;
                 }
             });
         }
